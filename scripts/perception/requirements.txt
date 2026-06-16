@@ -1,0 +1,12 @@
+numpy
+opencv-python
+pyyaml
+scipy
+ultralytics
+
+# Optional baseline dependencies:
+# tensorflow
+# tensorflow_hub
+# torch
+# torchvision
+# mmpose
