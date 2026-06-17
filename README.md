@@ -9,8 +9,9 @@ For questions, please get in touch with Yufeng Yang, f248yang@uwaterloo.ca.
 ## Overall Structure
 ![Overall Framework](images/overall-framework.png)
 
-## Simulation Results
+## Social-aware Motion Planning Simulation Results
 <table>
+  <caption><b>70th Simulation Results</b></caption>
   <tr>
     <td align="center">
       <img src="images/070th_SMF.gif" width="400"><br>
