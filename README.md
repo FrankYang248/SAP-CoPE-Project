@@ -34,6 +34,29 @@ For questions, please get in touch with Yufeng Yang, f248yang@uwaterloo.ca.
   </tr>
 </table>
 
+<table>
+  <caption><b>100th Simulation Results</b></caption>
+  <tr>
+    <td align="center">
+      <img src="images/100th_SMF.gif" width="400"><br>
+      <b>SMF</b>
+    </td>
+    <td align="center">
+      <img src="images/100th_SARL.gif" width="400"><br>
+      <b>SARL</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="images/100th_conventional.gif" width="400"><br>
+      <b>Conventional</b>
+    </td>
+    <td align="center">
+      <img src="images/100th_proposed.gif" width="400"><br>
+      <b>Proposed (Ours)</b>
+    </td>
+  </tr>
+</table>
 
 <!-- ### Scenario One: Obstacle and Human Interaction -->
 <!-- [![Watch the video](https://img.youtube.com/vi/yXRH-UHOn6I/maxresdefault.jpg)](https://youtu.be/yXRH-UHOn6I) -->
