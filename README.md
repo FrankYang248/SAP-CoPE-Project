@@ -7,10 +7,10 @@ Authored by Minghao Ning*, Yufeng Yang*, Shucheng Huang, Jiaming Zhong, Keqi Shu
 
 For questions, please get in touch with Yufeng Yang, f248yang@uwaterloo.ca.
 ## Overall Structure
-![Overall Framworls](https://github.com/user-attachments/assets/caf29e4a-bce9-4b99-aea1-c811d92746c3)
+![Overall Framework](images/overall-framework.png)
 
 ## Simulation Results
-![output2](https://github.com/user-attachments/assets/96531ca2-e11f-4cca-9e38-e4d0a004e231)
+![Simulation Results](images/simulation-results.gif)
 
 
 <!-- ### Scenario One: Obstacle and Human Interaction -->
