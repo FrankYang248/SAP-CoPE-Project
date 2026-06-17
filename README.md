@@ -10,7 +10,10 @@ For questions, please get in touch with Yufeng Yang, f248yang@uwaterloo.ca.
 ![Overall Framework](images/overall-framework.png)
 
 ## Simulation Results
-![Simulation Results](images/simulation-results.gif)
+![Simulation Results](images/070th_SMF.gif.gif)
+![Simulation Results](images/070th_SARL.gif.gif)
+![Simulation Results](images/070th_conventional.gif.gif)
+![Simulation Results](images/070th_proposed.gif.gif)
 
 
 <!-- ### Scenario One: Obstacle and Human Interaction -->
