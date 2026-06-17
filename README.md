@@ -10,10 +10,28 @@ For questions, please get in touch with Yufeng Yang, f248yang@uwaterloo.ca.
 ![Overall Framework](images/overall-framework.png)
 
 ## Simulation Results
-![Simulation Results](images/070th_SMF.gif)
-![Simulation Results](images/070th_SARL.gif)
-![Simulation Results](images/070th_conventional.gif)
-![Simulation Results](images/070th_proposed.gif)
+<table>
+  <tr>
+    <td align="center">
+      <img src="images/070th_SMF.gif" width="400"><br>
+      <b>SMF</b>
+    </td>
+    <td align="center">
+      <img src="images/070th_SARL.gif" width="400"><br>
+      <b>SARL</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="images/070th_conventional.gif" width="400"><br>
+      <b>Conventional</b>
+    </td>
+    <td align="center">
+      <img src="images/070th_proposed.gif" width="400"><br>
+      <b>Proposed (Ours)</b>
+    </td>
+  </tr>
+</table>
 
 
 <!-- ### Scenario One: Obstacle and Human Interaction -->
