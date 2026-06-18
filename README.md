@@ -60,8 +60,8 @@ For questions, please get in touch with Yufeng Yang, f248yang@uwaterloo.ca.
 
 <!-- ### Scenario One: Obstacle and Human Interaction -->
 <!-- [![Watch the video](https://img.youtube.com/vi/yXRH-UHOn6I/maxresdefault.jpg)](https://youtu.be/yXRH-UHOn6I) -->
-## Experiments Video
 
+## Overall Experiments Video
 <table>
   <tr>
     <td align="center" width="50%">
