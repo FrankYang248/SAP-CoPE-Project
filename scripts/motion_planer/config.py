@@ -39,7 +39,7 @@ class P:
 
     Q = np.kron(np.eye(Np), np.diag([3, 3, 6]))
     R = 1 * np.kron(np.eye(Nc), np.diag([1, 1, 2, 2]))
-    S = 1 * np.kron(np.eye(Nc), np.diag([1, 1]))
+    G = 1 * np.kron(np.eye(Nc), np.diag([1, 1]))
 
     # vehicle config
     L = 2.4  # [m]

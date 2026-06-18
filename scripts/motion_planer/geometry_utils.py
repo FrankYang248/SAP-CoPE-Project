@@ -36,6 +36,15 @@ def vertices_coord_set(L, D, xc, yc, theta):
     return Coord
 
 
+def circle_coord_set(radius, xc, yc, n_points=12):
+    """Boundary points of a circular obstacle of given radius, centred at
+    (xc, yc), returned as a closed polygon (first point repeated at the end)."""
+    angles = np.linspace(0, 2 * np.pi, n_points + 1)
+    x = xc + radius * np.cos(angles)
+    y = yc + radius * np.sin(angles)
+    return np.column_stack((x, y))
+
+
 def discrete_boundary(pos, n):
     X = pos[:, 0]
     Y = pos[:, 1]

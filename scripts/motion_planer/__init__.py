@@ -19,6 +19,7 @@ Pipeline
 from config import P
 from geometry_utils import (
     vertices_coord_set,
+    circle_coord_set,
     discrete_boundary,
     discrete_boundary2,
     compute_distance,
@@ -38,6 +39,7 @@ from mpc import (
 __all__ = [
     "P",
     "vertices_coord_set",
+    "circle_coord_set",
     "discrete_boundary",
     "discrete_boundary2",
     "compute_distance",

@@ -11,7 +11,7 @@ import numpy as np
 import casadi as ca
 
 from config import P
-from geometry_utils import vertices_coord_set, find_min_dis
+from geometry_utils import vertices_coord_set, circle_coord_set, find_min_dis
 
 
 def ps_derivation():
@@ -85,11 +85,15 @@ def PS_obs(grad_func, hess_func, X, Y, theta, obs_list_pred, option="Proposed"):
     D = P.D
     sigma_yy_1 = P.sigma_yy_1
     PS_weight = P.PS_weight
-    obs_list = vertices_coord_set(obs_list_pred[0], obs_list_pred[1], obs_list_pred[2], obs_list_pred[3], obs_list_pred[4])
 
-    Xi = obs_list_pred[2]
-    Yi = obs_list_pred[3]
-    Theta_i = obs_list_pred[4]
+    # obs_list_pred = [radius, Xi, Yi, theta]; the obstacle is treated as a
+    # circle of the given radius rather than an L x D rectangle.
+    radius = obs_list_pred[0]
+    Xi = obs_list_pred[1]
+    Yi = obs_list_pred[2]
+    Theta_i = obs_list_pred[3]
+
+    obs_list = circle_coord_set(radius, Xi, Yi)
 
     sigma_xx_1 = sigma_yy_1 * P.sigma_xx_multiplier
     sigma_xx_2 = sigma_yy_1

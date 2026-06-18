@@ -52,7 +52,8 @@ def MPC_PS_formulation(grad_func, hess_func, X, Y, theta, U, obs_list, Obs_vel, 
         curr_ps_f_sum = np.zeros((1, 2))
         curr_ps_h_sum = np.zeros((2, 2))
 
-        obs_list_pred[2:5, :] = obs_list_pred[2:5, :] + Obs_vel * P.Obs_stepTime
+        # Roll the obstacle [Xi, Yi, theta] rows forward by their velocity.
+        obs_list_pred[1:4, :] = obs_list_pred[1:4, :] + Obs_vel * P.Obs_stepTime
 
         beta_pred = math.atan2((P.lr * math.tan(delta_f) + P.lf * math.tan(delta_r)), (P.lf + P.lr))
         X_pred = X_pred + math.cos(theta_pred + beta_pred) * (P.nn * Vf_pred * math.cos(delta_f) + P.nn * Vr_pred * math.cos(delta_r)) / 2 / math.cos(beta_pred) * P.Ts
@@ -130,7 +131,7 @@ def matrix_batch_formulation(X, Y, theta, U, PS_h, PS_f, ref_defined):
     Nu = P.Nu
     Q = P.Q
     R = P.R
-    S = P.S
+    G = P.G
     wheelVel_ref = P.wheelVel_ref
 
     kesi = np.zeros((Nx + Nu, 1))
@@ -211,7 +212,7 @@ def matrix_batch_formulation(X, Y, theta, U, PS_h, PS_f, ref_defined):
     CC = np.kron(np.eye(Nc), [[1, 0, 0, 0], [0, 1, 0, 0]])
 
     # Construct H
-    H = 2 * (THETA.T @ Q @ THETA) + 2 * R + THETA.T @ Cps.T @ PS_h @ Cps @ THETA + 2 * CC.T @ S @ CC
+    H = 2 * (THETA.T @ Q @ THETA) + 2 * R + THETA.T @ Cps.T @ PS_h @ Cps @ THETA + 2 * CC.T @ G @ CC
 
     # Ensure symmetry
     H = (H + H.T) / 2
@@ -230,7 +231,7 @@ def matrix_batch_formulation(X, Y, theta, U, PS_h, PS_f, ref_defined):
     error_1 = Yita_ref - PSI @ kesi[0:Nx] - GAMMA @ PHI
 
     U_ref = wheelVel_ref*np.ones(2*P.Nc).reshape(-1, 1)
-    f = -2 * error_1.T @ Q @ THETA - 2*U_ref.T @ S @ CC + PS_f @ Cps @ THETA + ((Cps @ PSI @ kesi[0:Nx] + Cps @ GAMMA @ PHI - Z0).T @ PS_h @ Cps) @ THETA
+    f = -2 * error_1.T @ Q @ THETA - 2*U_ref.T @ G @ CC + PS_f @ Cps @ THETA + ((Cps @ PSI @ kesi[0:Nx] + Cps @ GAMMA @ PHI - Z0).T @ PS_h @ Cps) @ THETA
 
     return H, f, THETA, GAMMA, PSI, PHI, kesi, ind_ref
 

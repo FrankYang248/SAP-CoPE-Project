@@ -37,7 +37,7 @@ pip install numpy scipy scikit-learn casadi osqp
 | File | Contents |
 |---|---|
 | `config.py` | `P` — all tuning/vehicle/MPC parameters |
-| `geometry_utils.py` | rectangle vertices, boundary discretisation, minimum-distance search |
+| `geometry_utils.py` | robot rectangle vertices, circular-obstacle boundary, boundary discretisation, minimum-distance search |
 | `models.py` | `motion_model` (robot kinematics), `obs_model_pred` (constant-velocity obstacle predictor) |
 | `potential_field.py` | `ps_derivation()` (symbolic field), `PS_obs()` (per-obstacle gradient/Hessian) |
 | `mpc.py` | `MPC_PS_formulation()`, `MPC_formulation()`, and the batched QP helpers |
@@ -50,14 +50,15 @@ pip install numpy scipy scikit-learn casadi osqp
 - **Robot state** — `X, Y, theta` (position [m] and heading [rad]).
 - **Control input** `U` — a `(4, 1)` column `[Vf, Vr, delta_f, delta_r]`
   (front/rear wheel speed, front/rear steering angle).
-- **Obstacles** `obs_list` — shape `(5, N)`, one column per obstacle:
-  rows are `[L, D, Xi, Yi, theta]` (size, position, heading).
+- **Obstacles** `obs_list` — shape `(4, N)`, one column per obstacle:
+  rows are `[radius, Xi, Yi, theta]` (each obstacle is modelled as a circle of
+  the given radius at position `(Xi, Yi)` with heading `theta`).
 - **Obstacle velocities** `Obs_vel` — shape `(3, N)`, rows `[vx, vy, vyaw]`,
   used to roll obstacles forward over the prediction horizon.
 - **Reference path** `ref_defined` — shape `(3, M)`, rows `[x; y; theta]`.
 
 If no obstacle is visible, pass a single far-away dummy column, e.g.
-`obs_list = np.array([[0.5], [0.5], [-1000.0], [-1000.0], [0.0]])` and
+`obs_list = np.array([[0.25], [-1000.0], [-1000.0], [0.0]])` and
 `Obs_vel = np.zeros((3, 1))`.
 
 ---
@@ -78,9 +79,9 @@ grad_func, hess_func = ps_derivation()
 robot = motion_model(x=0.0, y=0.0, yaw=0.0)
 U = np.zeros((P.Nu, 1))          # [Vf, Vr, delta_f, delta_r]
 
-# 3. Your reference path (3 x M) and obstacle data (5 x N), (3 x N).
+# 3. Your reference path (3 x M) and obstacle data (4 x N), (3 x N).
 ref_defined = ...                # [x; y; theta]
-obs_list    = ...                # [L; D; Xi; Yi; theta]
+obs_list    = ...                # [radius; Xi; Yi; theta]
 Obs_vel     = ...                # [vx; vy; vyaw]
 
 X, Y, theta = robot.x, robot.y, robot.yaw
@@ -116,7 +117,7 @@ space field controller:
 |---|---|
 | `Np`, `Nc` | prediction / control horizon length |
 | `Ts`, `sim_Ts` | MPC step time / simulation step time [s] |
-| `Q`, `R`, `S` | tracking, input, and input-rate weights |
+| `Q`, `R`, `G` | tracking, input, and reference-speed weights |
 | `PS_weight` | overall strength of the personal space field |
 | `sigma_yy_1`, `sigma_xx_multiplier` | lateral / longitudinal extent of the field lobes |
 | `PS_H_MAX`, `PS_F_MAX` | element-wise caps on the field Hessian/gradient (numerical safety near collisions) |
