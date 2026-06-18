@@ -63,7 +63,7 @@ For questions, please get in touch with Yufeng Yang, f248yang@uwaterloo.ca.
 <!-- [![Watch the video](https://img.youtube.com/vi/yXRH-UHOn6I/maxresdefault.jpg)](https://youtu.be/yXRH-UHOn6I) -->
 
 ## Overall Experiments Video
-<table>
+<!-- <table>
   <tr>
     <td align="center" width="50%">
       <a href="https://www.youtube.com/watch?v=aMif5f1yLV4"><img src="https://img.youtube.com/vi/aMif5f1yLV4/maxresdefault.jpg" width="400"></a><br>
@@ -74,7 +74,7 @@ For questions, please get in touch with Yufeng Yang, f248yang@uwaterloo.ca.
       <b>Group Interaction 2</b>
     </td>
   </tr>
-</table>
+</table> -->
 
 <!-- ## Citation
 If you find this work useful, please consider citing:
