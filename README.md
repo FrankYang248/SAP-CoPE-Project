@@ -65,26 +65,6 @@ For questions, please get in touch with Yufeng Yang, f248yang@uwaterloo.ca.
 <table>
   <tr>
     <td align="center" width="50%">
-      <a href="https://www.youtube.com/watch?v=zujStRe5opY"><img src="https://img.youtube.com/vi/zujStRe5opY/maxresdefault.jpg" width="400"></a><br>
-      <b>Yielding</b>
-    </td>
-    <td align="center" width="50%">
-      <a href="https://www.youtube.com/watch?v=mxEISI-pIPE"><img src="https://img.youtube.com/vi/mxEISI-pIPE/maxresdefault.jpg" width="400"></a><br>
-      <b>Group Interaction</b>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
-      <a href="https://www.youtube.com/watch?v=-QVE9bT__44"><img src="https://img.youtube.com/vi/-QVE9bT__44/maxresdefault.jpg" width="400"></a><br>
-      <b>Single Person Interaction</b>
-    </td>
-    <td align="center" width="50%">
-      <a href="https://www.youtube.com/watch?v=bxoDXpwp38g"><img src="https://img.youtube.com/vi/bxoDXpwp38g/maxresdefault.jpg" width="400"></a><br>
-      <b>Two People Interaction</b>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="50%">
       <a href="https://www.youtube.com/watch?v=aMif5f1yLV4"><img src="https://img.youtube.com/vi/aMif5f1yLV4/maxresdefault.jpg" width="400"></a><br>
       <b>Yielding 2</b>
     </td>
