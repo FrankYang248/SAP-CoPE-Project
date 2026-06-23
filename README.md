@@ -8,7 +8,9 @@ Authored by Minghao Ning*, Yufeng Yang*, Shucheng Huang, Jiaming Zhong, Keqi Shu
 For questions, please get in touch with Yufeng Yang, f248yang@uwaterloo.ca.
 
 ## Overall Structure
-![Overall Framework](images/overall-framework.png)
+<p align="center">
+  <img src="images/overall-framework.png" alt="Overall Framework" width="800">
+</p>
 
 ## Social-aware Motion Planning Simulation Results
 <table>
