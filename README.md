@@ -69,11 +69,11 @@ For questions, please get in touch with Yufeng Yang, f248yang@uwaterloo.ca.
   <tr>
     <td align="center">
       <a href="https://www.youtube.com/watch?v=4ZhqCqJj32c"><img src="https://img.youtube.com/vi/4ZhqCqJj32c/maxresdefault.jpg" width="400"></a><br>
-      <b>Yielding 2</b>
+      <b>Experiment with 4 Human</b>
     </td>
     <td align="center">
       <a href="https://www.youtube.com/watch?v=RPb8L-EP16Y"><img src="https://img.youtube.com/vi/RPb8L-EP16Y/maxresdefault.jpg" width="400"></a><br>
-      <b>Group Interaction 2</b>
+      <b>Other Experiment Results</b>
     </td>
   </tr>
 </table>
