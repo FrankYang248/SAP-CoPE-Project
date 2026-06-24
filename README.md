@@ -68,11 +68,11 @@ For questions, please get in touch with Yufeng Yang, f248yang@uwaterloo.ca.
 <table>
   <tr>
     <td align="center">
-      <a href="https://www.youtube.com/watch?v=aMif5f1yLV4"><img src="https://img.youtube.com/vi/aMif5f1yLV4/maxresdefault.jpg" width="400"></a><br>
+      <a href="https://www.youtube.com/watch?v=4ZhqCqJj32c"><img src="https://img.youtube.com/vi/4ZhqCqJj32c/maxresdefault.jpg" width="400"></a><br>
       <b>Yielding 2</b>
     </td>
     <td align="center">
-      <a href="https://www.youtube.com/watch?v=RbLEu5zwzKo"><img src="https://img.youtube.com/vi/RbLEu5zwzKo/maxresdefault.jpg" width="400"></a><br>
+      <a href="https://www.youtube.com/watch?v=RPb8L-EP16Y"><img src="https://img.youtube.com/vi/RPb8L-EP16Y/maxresdefault.jpg" width="400"></a><br>
       <b>Group Interaction 2</b>
     </td>
   </tr>
