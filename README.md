@@ -3,7 +3,7 @@ Official Repo of "SAP-CoPE: Social-Aware Planning using Cooperative Pose Estimat
 
 Authored by Minghao Ning*, Yufeng Yang*, Shucheng Huang, Jiaming Zhong, Keqi Shu, Chen Sun, Ehsan Hashemi and Amir Khajepour. 
 
-\* indicates equal contribution, authors listed in alphabetical order. 
+\* indicates equal contribution.
 
 For questions, please get in touch with Yufeng Yang, f248yang@uwaterloo.ca.
 
